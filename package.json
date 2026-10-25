@@ -1,0 +1,52 @@
+{
+  "name": "@yes20sh/create-mern-stack-app",
+  "version": "1.0.5",
+  "description": "A production-ready MERN stack starter CLI generator and monorepo with React, Vite, TailwindCSS, Express, and MongoDB.",
+  "type": "module",
+  "main": "bin/cli.js",
+  "bin": {
+    "create-mern-stack-app": "bin/cli.js",
+    "create-mern-starter": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently -n \"API,WEB\" -c \"cyan,magenta\" \"npm run dev --prefix api\" \"npm run dev --prefix web\"",
+    "dev:api": "npm run dev --prefix api",
+    "dev:web": "npm run dev --prefix web",
+    "build": "npm run build --prefix web",
+    "install:all": "npm install && npm install --prefix api && npm install --prefix web",
+    "cli": "node bin/cli.js",
+    "test:cli": "node bin/cli.js test-app --no-install -y"
+  },
+  "keywords": [
+    "mern",
+    "mern-stack",
+    "starter",
+    "template",
+    "generator",
+    "create-mern-app",
+    "create-mern-stack-app",
+    "express",
+    "react",
+    "vite",
+    "mongodb",
+    "tailwindcss",
+    "shadcn"
+  ],
+  "author": "Yashraj Singh Solanki <yes20sh@outlook.com>",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "api",
+    "web",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

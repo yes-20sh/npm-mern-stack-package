@@ -1,0 +1,19 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "1.0.0",
+  "description": "Full-stack MERN application generated with create-mern-stack-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"API,WEB\" -c \"cyan,magenta\" \"npm run dev --prefix api\" \"npm run dev --prefix web\"",
+    "dev:api": "npm run dev --prefix api",
+    "dev:web": "npm run dev --prefix web",
+    "start": "npm run start --prefix api",
+    "build": "npm run build --prefix web",
+    "build:all": "npm run build --prefix web",
+    "install:all": "npm install && npm install --prefix api && npm install --prefix web"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
