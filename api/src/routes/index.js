@@ -1,10 +1,10 @@
-import express from 'express'
-import healthRoutes from './healthRoutes.js'
-import userRoutes from './userRoutes.js'
+import express from "express";
+import healthRoutes from "./healthRoutes.js";
+import authRoutes from "./authRoutes.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.use('/api/health', healthRoutes)
-router.use('/api/users', userRoutes)
+router.use("/api/health", healthRoutes);
+router.use("/api/auth", authRoutes);
 
-export default router
+export default router;

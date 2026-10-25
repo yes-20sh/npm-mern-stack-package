@@ -1,6 +1,6 @@
 {
   "name": "@yes20sh/create-mern-stack-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A production-ready MERN stack starter CLI generator and monorepo with React, Vite, TailwindCSS, Express, and MongoDB.",
   "type": "module",
   "main": "bin/cli.js",
